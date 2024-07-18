@@ -1,30 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('subscription-form');
-    const confirmationMessage = document.getElementById('confirmation-message');
+    const form = document.getElementById('suscripcion');
+    const mensajeConfirmacion = document.getElementById('confirmation-message');
 
     const nombre = document.getElementById('nombre');
     const apellidos = document.getElementById('apellidos');
     const email = document.getElementById('email');
-    const confirmEmail = document.getElementById('confirm-email');
+    const confirmEmail = document.getElementById('confirm__email');
     const password = document.getElementById('password');
-    const confirmPassword = document.getElementById('confirm-password');
+    const confirmPassword = document.getElementById('confirm__password');
     const plan = document.getElementById('plan');
-    const singleGenre = document.getElementById('single-genre');
-    const multipleGenre = document.getElementById('multiple-genre');
+    const unicoGenero = document.getElementById('unico__genero');
+    const multipleGenero = document.getElementById('multiple-genre');
 
-    const errorNombre = document.getElementById('error-nombre');
-    const errorApellidos = document.getElementById('error-apellidos');
-    const errorEmail = document.getElementById('error-email');
-    const errorConfirmEmail = document.getElementById('error-confirm-email');
-    const errorPassword = document.getElementById('error-password');
-    const errorConfirmPassword = document.getElementById('error-confirm-password');
+    const errorNombre = document.getElementById('error__nombre');
+    const errorApellidos = document.getElementById('error__apellidos');
+    const errorEmail = document.getElementById('error__email');
+    const errorConfirmEmail = document.getElementById('error__confirm-email');
+    const errorPassword = document.getElementById('error__password');
+    const errorConfirmPassword = document.getElementById('error__confirm-password');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
         if (validateForm()) {
             form.style.display = 'none';
-            confirmationMessage.style.display = 'block';
+            mensajeConfirmacion.style.display = 'block';
         }
     });
 
@@ -32,16 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
         resetValidation();
         form.style.display = 'block';
-        confirmationMessage.style.display = 'none';
+        mensajeConfirmacion.style.display = 'none';
     });
 
     plan.addEventListener('change', function () {
         if (plan.value === 'voraz') {
-            singleGenre.style.display = 'none';
-            multipleGenre.style.display = 'block';
+            unicoGenero.style.display = 'none';
+            multipleGenero.style.display = 'block';
         } else {
-            singleGenre.style.display = 'block';
-            multipleGenre.style.display = 'none';
+            unicoGenero.style.display = 'block';
+            multipleGenero.style.display = 'none';
         }
     });
 
@@ -110,12 +110,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function resetValidation() {
-        const errorMessages = document.querySelectorAll('.error-message');
+        const errorMessages = document.querySelectorAll('.mensaje__error');
         errorMessages.forEach(function (errorMessage) {
             errorMessage.style.display = 'none';
         });
 
-        const inputs = document.querySelectorAll('.form-input');
+        const inputs = document.querySelectorAll('.form__input');
         inputs.forEach(function (input) {
             input.style.borderColor = '#ccc';
         });

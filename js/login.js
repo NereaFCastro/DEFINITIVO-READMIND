@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('login-form');
-    const loginConfirmationMessage = document.getElementById('login-confirmation-message');
+    const loginForm = document.getElementById('login__form');
+    const loginConfirmationMessage = document.getElementById('confirmacion');
 
-    const loginEmail = document.getElementById('login-email');
-    const loginPassword = document.getElementById('login-password');
+    const loginEmail = document.getElementById('email');
+    const loginPassword = document.getElementById('password');
 
-    const errorLoginEmail = document.getElementById('error-login-email');
-    const errorLoginPassword = document.getElementById('error-login-password');
+    const errorLoginEmail = document.getElementById('error__email');
+    const errorLoginPassword = document.getElementById('error__password');
 
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault();

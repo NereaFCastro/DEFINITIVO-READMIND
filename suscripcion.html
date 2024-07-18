@@ -14,69 +14,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="js/planes.js" defer></script>
     <script src="js/suscripcion.js" defer></script>
+    <script src="js/scroll.js" defer></script>
 </head>
 <body>
-    <main class="Main">
-    <div class="form-container">
-        <a href="http://127.0.0.1:5501/index.html"><img src="img/READMIND.png" alt="Logo" class="Header-logoImage"></a>
-        <form id="subscription-form">
-        <h1 class="form-title">¡Únete a <span class="destacado">READ MIND</span>!</h1>
+    <main class="main">
+    <div class="form__container">
+        <a href="http://127.0.0.1:5501/index.html"><img src="img/READMIND.png" alt="Logo" class="logo__img"></a>
+        <form id="suscripcion">
+        <h1 class="form__h1">¡Únete a <span class="destacado">READ MIND</span>!</h1>
        
-            <div class="form-group">
+            <div class="form__grupo">
                 <h2>Tus datos</h2>
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" class="form-input" required>
-                <span class="error-message" id="error-nombre"></span>
+                <label for="nombre" class="form__etiqueta">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form__input" required>
+                <span class="mensaje__error" id="error__nombre"></span>
             </div>
-            <div class="form-group">
-                <label for="apellidos" class="form-label">Apellidos:</label>
-                <input type="text" id="apellidos" name="apellidos" class="form-input" required>
-                <span class="error-message" id="error-apellidos"></span>
+            <div class="form__grupo">
+                <label for="apellidos" class="form__etiqueta">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" class="form__input" required>
+                <span class="mensaje__error" id="error__apellidos"></span>
             </div>
-            <div class="form-group">
-                <label for="email" class="form-label">Correo electrónico:</label>
-                <input type="email" id="email" name="email" class="form-input" required>
-                <span class="error-message" id="error-email"></span>
+            <div class="form__grupo">
+                <label for="email" class="form__etiqueta">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="form__input" required>
+                <span class="mensaje__error" id="error__email"></span>
             </div>
-            <div class="form-group">
-                <label for="confirm-email" class="form-label">Confirmación correo electrónico:</label>
-                <input type="email" id="confirm-email" name="confirm-email" class="form-input" required>
-                <span class="error-message" id="error-confirm-email"></span>
+            <div class="form__grupo">
+                <label for="confirm__email" class="form__etiqueta">Confirmación correo electrónico:</label>
+                <input type="email" id="confirm__email" name="confirm__email" class="form__input" required>
+                <span class="mensaje__error" id="error__confirm-email"></span>
             </div>
-            <div class="form-group">
-                <label for="password" class="form-label">Contraseña:</label>
-                <input type="password" id="password" name="password" class="form-input" required>
-                <div id="password-strength" class="password-strength"></div>
-                <span class="error-message" id="error-password"></span>
+            <div class="form__grupo">
+                <label for="password" class="form__etiqueta">Contraseña:</label>
+                <input type="password" id="password" name="password" class="form__input" required>
+                <div id="password__strength" class="password__strength"></div>
+                <span class="mensaje__error" id="error__password"></span>
             </div>
-            <div class="form-group">
-                <label for="confirm-password" class="form-label">Confirmación contraseña:</label>
-                <input type="password" id="confirm-password" name="confirm-password" class="form-input" required>
-                <span class="error-message" id="error-confirm-password"></span>
+            <div class="form__grupo">
+                <label for="confirm__password" class="form__etiqueta">Confirmación contraseña:</label>
+                <input type="password" id="confirm__password" name="confirm__password" class="form__input" required>
+                <span class="mensaje__error" id="error__confirm-password"></span>
             </div>
-            <div class="form-group">
-                <label for="telefono" class="form-label">Teléfono de contacto:</label>
-                <input type="tel" id="telefono" name="telefono" class="form-input">
+            <div class="form__grupo">
+                <label for="telefono" class="form__etiqueta">Teléfono de contacto:</label>
+                <input type="tel" id="telefono" name="telefono" class="form__input">
             </div>
-            <div class="form-group">
-                <label for="direccion" class="form-label">Dirección de envío:</label>
-                <input type="text" id="direccion" name="direccion" class="form-input">
+            <div class="form__grupo">
+                <label for="direccion" class="form__etiqueta">Dirección de envío:</label>
+                <input type="text" id="direccion" name="direccion" class="form__input">
             </div>
-            <div class="form-group">
+            <div class="form__grupo">
                 <h2>Tu plan</h2>
-                <label for="plan" class="form-label">¿Qué tipo de lector eres?</label>
-                <select id="plan" name="plan" class="form-input" required>
+                <label for="plan" class="form__etiqueta">¿Qué tipo de lector eres?</label>
+                <select id="plan" name="plan" class="form__input" required>
                     <option value="">Selecciona un plan</option>
                     <option value="solitario">Lector Solitario - 12€ / mes</option>
                     <option value="amigo">Lector Amigo - 15€ / mes</option>
                     <option value="voraz">Lector Voraz - 25€ / mes</option>
                 </select>
             </div>
-            <div class="form-group" id="genre-container">
-                <label class="form-label">¿Cuál es tu género favorito? No te preocupes, podrás cambiar cuantas veces quieras en tu perfil.</label>
-                <div id="single-genre" class="genre-select">
-                    <input list="genres" name="genre-single" id="genre-single" class="form-input">
-                    <datalist id="genres">
+            <div class="form__grupo" id="contenedor__genero">
+                <label class="form__etiqueta">¿Cuál es tu género favorito? No te preocupes, podrás cambiar cuantas veces quieras en tu perfil.</label>
+                <div id="unico__genero" class="seleccionar__genero">
+                    <input list="generos" name="genero__unico" id="genero__unico" class="form__input">
+                    <datalist id="generos">
                         <option value="Ficción">
                         <option value="Misterio">
                         <option value="Fantasía">
@@ -88,48 +89,74 @@
                         </option>
                     </datalist>
                 </div>
-                <div id="multiple-genre" class="genre-select" style="display: none;">
-                    <label class="form-label">Género 1:</label>
-                    <input list="genres" name="genre-multiple-1" class="form-input genre-multiple">
-                    <label class="form-label">Género 2:</label>
-                    <input list="genres" name="genre-multiple-2" class="form-input genre-multiple">
-                    <label class="form-label">Género 3:</label>
-                    <input list="genres" name="genre-multiple-3" class="form-input genre-multiple">
+                <div id="multiple-genre" class="seleccionar__genero" style="display: none;">
+                    <label class="form__etiqueta">Género 1:</label>
+                    <input list="generos" name="genero__multiple1" class="form__input genero__multiple">
+                    <label class="form__etiqueta">Género 2:</label>
+                    <input list="generos" name="genero__multiple2" class="form__input genero__multiple">
+                    <label class="form__etiqueta">Género 3:</label>
+                    <input list="generos" name="genero__multiple3" class="form__input genero__multiple">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form__grupo">
                 <h2>Tus datos bancarios</h2>
-                <label for="card-number" class="form-label">Número de Tarjeta:</label>
-                <input type="text" id="card-number" name="card-number" class="form-input" required>
+                <label for="tarjeta" class="form__etiqueta">Número de Tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" class="form__input" required>
             </div>
-            <div class="form-group">
-                <label for="card-expiry" class="form-label">Fecha de Expiración:</label>
-                <input type="text" id="card-expiry" name="card-expiry" class="form-input" placeholder="MM/AA" required>
+            <div class="form__grupo">
+                <label for="tarjeta__caduca" class="form__etiqueta">Fecha de Expiración:</label>
+                <input type="text" id="tarjeta__caduca" name="tarjeta__caduca" class="form__input" placeholder="MM/AA" required>
             </div>
-            <div class="form-group">
-                <label for="card-cvc" class="form-label">CVC:</label>
-                <input type="text" id="card-cvc" name="card-cvc" class="form-input" required>
+            <div class="form__grupo">
+                <label for="tarjeta__cvc" class="form__etiqueta">CVC:</label>
+                <input type="text" id="tarjeta__cvc" name="tarjeta__cvc" class="form__input" required>
             </div>
-            <div class="form-group">
-                <label for="cupon" class="form-label">¿Tienes un código de escuento? </label>
-                <input type="text" id="cupon" name="cupon" class="form-input">
+            <div class="form__grupo">
+                <label for="cupon" class="form__etiqueta">¿Tienes un código de escuento? </label>
+                <input type="text" id="cupon" name="cupon" class="form__input">
             </div>
-            <div class="form-group form-group--check">
-                <input type="checkbox" id="comunicaciones" name="comunicaciones" class="form-checkbox">
-                <label for="comunicaciones" class="form-label">¡Me gustaría suscribirme al Newsletter!</label>
+            <div class="form__grupo form__grupo--check">
+                <input type="checkbox" id="comunicaciones" name="comunicaciones" class="form__checkbox">
+                <label for="comunicaciones" class="form__etiqueta">¡Me gustaría suscribirme al Newsletter!</label>
             </div>
-            <div class="form-group form-group--check">
-                <input type="checkbox" id="terms" name="terms" class="form-checkbox" required>
-                <label for="terms" class="form-label">Acepto los <a href="#">términos y condiciones</a></label>
+            <div class="form__grupo form__grupo--check">
+                <input type="checkbox" id="terms" name="terms" class="form__checkbox" required>
+                <label for="terms" class="form__etiqueta">Acepto los <a href="#">términos y condiciones</a></label>
             </div>
-            <button type="submit" class="form-button">Registrarse</button>
+            <button type="submit" class="button__form">Registrarse</button>
             <p>Volver a la <a href="http://127.0.0.1:5501/index.html">página principal</a></p>
             
         </form>
-        <div id="confirmation-message" class="confirmation-message" style="display: none;">
+        <div id="confirmacion" class="confirmacion">
             <p>Registro realizado correctamente. Te enviaremos un correo de confirmación.</p>
         </div>
     </div>
+    <a href="http://127.0.0.1:5501/contacto.html#contact-form-title" class="icon__contacto">
+        <i class="fas fa-envelope"></i>
+    </a>
+    <a href="#" class="icon__scroll">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </main>
+
+<footer class="footer">
+        
+    <div class="footer__icons">
+        <a href="https://wa.me/123456789" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp fa-2xl"></i>
+        </a>
+        <a href="https://www.instagram.com/tu_perfil" target="_blank" title="Instagram">
+            <i class="fab fa-instagram fa-2xl"></i>
+        </a>
+        <a href="https://www.facebook.com/tu_perfil" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook fa-2xl"></i>
+        </a>
+        <a href="https://twitter.com/tu_perfil" target="_blank" title="Twitter">
+            <i class="fab fa-twitter fa-2xl"></i>
+        </a>
+    </div>
+    <div class="footer__tyc "><a href="tyyc.html">Términos y condiciones</a></div>
+   
+</footer>
 </body>
 </html>

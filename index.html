@@ -18,39 +18,40 @@
 
 </head>
 <body>
-<header class="Header">
-            <div class="Header-paginas">
-                <div class="Header-logo">
-                    <a href="http://127.0.0.1:5501/index.html"><img src="img/READMIND.png" alt="Logo" class="Header-logoImage"></a>
+<header class="header">
+            <div class="header__secciones">
+                <div class="header__logo">
+                    <a href="http://127.0.0.1:5501/index.html"><img src="img/READMIND.png" alt="Logo" class="logo__img"></a>
                 </div>
-                <nav class="Header-nav">
-                    <ul class="Header-navList">
-                        <li class="Header-navItem"><a href="http://127.0.0.1:5501/quienessomos.html" class="Header-navLink">¿quiénes somos?</a></li>
-                        <li class="Header-navItem"><a href="http://127.0.0.1:5501/planes.html" class="Header-navLink">planes</a></li>
-                        <li class="Header-navItem"><a href="http://127.0.0.1:5501/contacto.html" class="Header-navLink">FAQ</a></li>
+                <nav class="nav">
+                    <ul class="nav__secciones">
+                        <li class="nav__item"><a href="http://127.0.0.1:5501/quienessomos.html" class="nav__link">¿quiénes somos?</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:5501/planes.html" class="nav__link">planes</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:5501/contacto.html" class="nav__link">FAQ</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="Header-right">
-                <a href="login.html" class="Header-navLink">
+            <div class="header__login">
+                <a href="login.html" class="nav__link">
                     <i class="fas fa-user"></i> Log in
                 </a>
             </div>
-            <button class="Header-menuButton" aria-label="Abrir menú">
+            <!-- Añadimos aria-label para mejorar la accesibilidad -->
+            <button class="header__button" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="Header-mobileMenu">
-                <nav class="Header-navMobile">
-                    <ul class="Header-navListMobile">
-                        <li class="Header-navItemMobile"><a href="http://127.0.0.1:5501/quienessomos.html" class="Header-navLinkMobile">¿Quiénes somos?</a></li>
-                        <li class="Header-navItemMobile"><a href="http://127.0.0.1:5501/planes.html" class="Header-navLinkMobile">Planes</a></li>
-                        <li class="Header-navItemMobile"><a href="http://127.0.0.1:5501/contacto.html" class="Header-navLinkMobile">FAQ</a></li>
+            <div class="header__secciones-movil">
+                <nav class="nav__movil">
+                    <ul class="nav__secciones-movil">
+                        <li class="nav__item-movil"><a href="http://127.0.0.1:5501/quienessomos.html" class="nav__link-movil">¿Quiénes somos?</a></li>
+                        <li class="nav__item-movil"><a href="http://127.0.0.1:5501/planes.html" class="nav__link-movil">Planes</a></li>
+                        <li class="nav__item-movil"><a href="http://127.0.0.1:5501/contacto.html" class="nav__link-movil">FAQ</a></li>
                     </ul>
                 </nav>
                 
             </div>
         </header>
-<main class="Main">
+<main class="main">
         
 <!-- <div class="Main-intro"> -->
     <div class="Main-intro">
@@ -117,17 +118,17 @@
     </div>
 
 </div>
-<a href="http://127.0.0.1:5501/contacto.html#contact-form-title" class="Header-contactIcon">
+<a href="http://127.0.0.1:5501/contacto.html#contact-form-title" class="icon__contacto">
     <i class="fas fa-envelope"></i>
 </a>
-<a href="#" class="scroll-to-top">
+<a href="#" class="icon__scroll">
     <i class="fas fa-arrow-up"></i>
 </a>
     </main>
 
     <footer class="footer">
         
-        <div class="social-icons">
+        <div class="footer__icons">
             <a href="https://wa.me/123456789" target="_blank" title="WhatsApp">
                 <i class="fab fa-whatsapp fa-2xl"></i>
             </a>
@@ -141,7 +142,7 @@
                 <i class="fab fa-twitter fa-2xl"></i>
             </a>
         </div>
-        <div class="Footer_tyc "><a href="tyyc.html">Términos y condiciones</a></div>
+        <div class="footer__tyc "><a href="tyyc.html">Términos y condiciones</a></div>
        
     </footer>
        

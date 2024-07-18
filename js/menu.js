@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuButton = document.querySelector('.Header-menuButton');
-    const mobileMenu = document.querySelector('.Header-mobileMenu');
+    const menuButton = document.querySelector('.header__button');
+    const mobileMenu = document.querySelector('.header__secciones-movil');
 
     menuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');

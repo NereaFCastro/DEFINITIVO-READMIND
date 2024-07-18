@@ -13,32 +13,59 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="js/login.js" defer></script>
+    <script src="js/scroll.js" defer></script>
 </head>
 <body>
-    <main class="Main">
-        <div class="login-container">
-            <a href="http://127.0.0.1:5501/index.html"><img src="img/READMIND.png" alt="Logo" class="Header-logoImage"></a>
-            <h1 class="login-title">Inicio de sesión</h1>
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="login-email" class="form-label">Correo electrónico:*</label>
-                    <input type="email" id="login-email" name="login-email" class="form-input" required>
-                    <span class="error-message" id="error-login-email"></span>
+    <main class="main">
+        <div class="login__container">
+            <a href="http://127.0.0.1:5501/index.html"><img src="img/READMIND.png" alt="Logo" class="logo__img"></a>
+            <h1 class="login__h1">Inicio de sesión</h1>
+            <form id="login__form">
+                <div class="form__grupo">
+                    <label for="email" class="form__etiqueta">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" class="form__input" required>
+                    <span class="mensaje__error" id="error__email"></span>
                 </div>
-                <div class="form-group">
-                    <label for="login-password" class="form-label">Contraseña:*</label>
-                    <input type="password" id="login-password" name="login-password" class="form-input" required>
-                    <span class="error-message" id="error-login-password"></span>
-                </div>
-                <button type="submit" class="form-button">Iniciar sesión</button>
-                <p class="forgot-password"><a href="#">¿Olvidaste tu contraseña?</a></p>
+                <div class="form__grupo">
+                    <label for="password" class="form__etiqueta">Contraseña:</label>
+                    <input type="password" id="password" name="password" class="form__input" required>
+                    <div id="password__strength" class="password__strength"></div>
+                    <span class="mensaje__error" id="error__password"></span>
+                    <button type="submit" class="button__form">Iniciar sesión</button>
+                    
+                <p class="forgot__password"><a href="#">¿Olvidaste tu contraseña?</a></p>
             </form>
-            <div id="login-confirmation-message" class="confirmation-message" style="display: none;">
-                <p>Inicio de sesión exitoso.</p>
+            <div id="confirmacion" class="confirmacion">
+                <p>Inicio de sesión realizado correctamente</p>
             </div>
-            <p class="not-member-text">¿Todavía no formas parte del club? <a href="http://127.0.0.1:5501/suscripcion.html">¡Únete!</a></p>
+            <p class="login__p">¿Todavía no formas parte del club? <a href="http://127.0.0.1:5501/suscripcion.html">¡Únete!</a></p>
         </div>
+        <a href="http://127.0.0.1:5501/contacto.html#contact-form-title" class="icon__contacto">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="#" class="icon__scroll">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </main>
+    <footer class="footer">
+        
+        <div class="footer__icons">
+            <a href="https://wa.me/123456789" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp fa-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/tu_perfil" target="_blank" title="Instagram">
+                <i class="fab fa-instagram fa-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com/tu_perfil" target="_blank" title="Facebook">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+            </a>
+            <a href="https://twitter.com/tu_perfil" target="_blank" title="Twitter">
+                <i class="fab fa-twitter fa-2xl"></i>
+            </a>
+        </div>
+        <div class="footer__tyc "><a href="tyyc.html">Términos y condiciones</a></div>
+       
+    </footer>
     
 </body>
 </html>
