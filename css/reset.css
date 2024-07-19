@@ -12,13 +12,6 @@
     height: 100%;
   }
   
-  body {
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    font-size: 16px;
-    /* Optional but I like to apply a base font always */
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
-  }
   
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
