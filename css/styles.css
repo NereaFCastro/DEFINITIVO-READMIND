@@ -652,7 +652,7 @@ color: var(--color-background); /* Color del texto del botón activo */
 .acordeon__h2{
     font-family: 'Limelight', cursive;
     color: #333;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     margin-top: .625rem;
 
 }
