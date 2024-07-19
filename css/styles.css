@@ -1,5 +1,5 @@
 
-
+/* ESTILOS GLOBALES */
 
 body{
     --font-family-primary: "museomoderno", sans-serif;
@@ -28,7 +28,8 @@ input, button, textarea, select {
     }
 
   
-/* Estilo para navegadores basados en Trident/EdgeHTML (Internet Explorer y Edge antiguo) */
+ /* Estilos para la scrollbar extraído de https://www.campusmvp.es/recursos/post/como-personalizar-los-estilos-css-de-las-barras-de-scroll.aspx */
+/* Estilo para navegadores Trident/EdgeHTML */
 body::-ms-scrollbar {
     width: 10px;
     
@@ -38,19 +39,20 @@ body::-ms-scrollbar-track {
     background:var(--color-background);}
 
 ::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 10px; 
 
 }
 
 ::-webkit-scrollbar-track {
-    background:var(--color-background); /* Color del track de la barra de desplazamiento */
+    background:var(--color-background); /
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0E9D62; /* Color de la barra de desplazamiento */
-    border-radius: .625rem; /* Redondeado de la barra de desplazamiento */
-    border: 2px solid  rgb(255, 253, 246); /* Borde alrededor de la barra de desplazamiento */
+    background-color: #0E9D62; 
+    border-radius: .625rem; 
+    border: 2px solid  rgb(255, 253, 246); 
 }
+
 
 .header {
     display: flex;
@@ -68,6 +70,10 @@ body::-ms-scrollbar-track {
     
 }
 
+.destacado{
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+}
 
 .logo__img{
     width: 6.25rem;
@@ -80,7 +86,7 @@ body::-ms-scrollbar-track {
       display: flex;
       flex-wrap: wrap;
       font-size: 1rem;
-      margin-left: auto; /* Mueve los elementos a la derecha en pantallas grandes */
+      margin-left: auto; 
     
   }
 
@@ -133,12 +139,12 @@ body::-ms-scrollbar-track {
 .header__secciones-movil {
     display: none;
     position: absolute;
-    top: 100%; /* Posiciona el menú desplegable debajo del header */
+    top: 100%; 
     left: 0;
     width: 100%;
-    background-color:var(--color-background); /* Fondo blanco para el menú desplegable */
-    box-shadow: 0rem .5rem 1rem 0rem rgba(0,0,0,0.2); /* Sombra */
-    z-index: 1; /* Asegura que esté encima del contenido */
+    background-color:var(--color-background);
+    box-shadow: 0rem .5rem 1rem 0rem rgba(0,0,0,0.2); 
+    z-index: 1;
 
 }
 
@@ -148,17 +154,17 @@ body::-ms-scrollbar-track {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 100%; /* Posiciona el menú desplegable debajo del header */
+    top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--color-background); /* Fondo blanco para el menú desplegable */
-    z-index: 1; /* Asegura que esté encima del contenido */
+    background-color: var(--color-background); 
+    z-index: 1; 
     border-bottom: .0625rem solid var(--color-text);}
 
 .nav__item-movil {
     list-style: none;
     margin: .625rem 0;
-    text-align: center; /* Centra los elementos */
+    text-align: center;
 }
 
 .nav__link-movil {
@@ -166,7 +172,8 @@ body::-ms-scrollbar-track {
     text-decoration: none;
     font-size: 1rem;
     padding: .625rem 1.25rem;
-    display: block; /* Asegura que los enlaces ocupen todo el ancho */}
+    display: block; 
+}
 
     .nav__link-movil:hover {
         font-weight: 600;
@@ -182,6 +189,7 @@ body::-ms-scrollbar-track {
     flex-direction: column;
     margin: 1.25rem;
     justify-content: center;
+    margin: 2rem;
   
 
 }
@@ -206,7 +214,7 @@ body::-ms-scrollbar-track {
 
 }
 .intro{
-    width: 80%;
+    width: 100%;
     min-width: 18.75rem;
 }
 
@@ -221,6 +229,7 @@ body::-ms-scrollbar-track {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .main__quienessomos{
@@ -253,12 +262,14 @@ body::-ms-scrollbar-track {
 
 }
 
+/* ESTILOS NEWSLETTER */
+
 .newsletter {
     padding: 1.25rem;
     border-radius: 1.5625rem 0rem 1.5625rem 0rem;
     text-align: center;
-    background-color: rgba(126, 212, 139, 0.5); /* Color de fondo con opacidad */
-    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: rgba(126, 212, 139, 0.5); 
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1); 
     max-width: 21.875rem;
     
 
@@ -300,12 +311,17 @@ body::-ms-scrollbar-track {
     box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
 }
 
+.newsletter__img{
+    max-width: 30%;
+    
+}
+
 .main__parteinferior{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
     
 }
@@ -314,15 +330,8 @@ body::-ms-scrollbar-track {
     width: 100%;
 } 
 
-.newsletter__img{
-    max-width: 30%;
-    
-}
 
-.destacado{
-    font-family: var(--font-family-primary);
-    font-weight: 400;
-}
+
 
  .proceso{
     margin-top: 3.125rem;
@@ -390,12 +399,7 @@ body::-ms-scrollbar-track {
 
 }
 
-.slider__info{
-    font-size: 1rem;
-    text-align: justify;
-    font-family: var(--font-family-primary);
-    font-weight: 300;
-}
+
 
 .main__autor{
     font-family: var(--font-family-third);
@@ -431,7 +435,18 @@ body::-ms-scrollbar-track {
     
      
  }
+
+/* ESTILOS SLIDER */
+
+.slider__info{
+    font-size: 1rem;
+    text-align: justify;
+    font-family: var(--font-family-primary);
+    font-weight: 300;
+}
+
 .slider__container {
+    
     width: 100%;
     max-width: 75rem;
     overflow: hidden;
@@ -441,8 +456,10 @@ body::-ms-scrollbar-track {
 }
 
 .slider {
+    flex: 0 0 33.33%;
     display: flex;
     transition: transform 0.2s ease-in-out;
+    
     }
 
 .slider__card {
@@ -455,8 +472,8 @@ body::-ms-scrollbar-track {
 
     margin: .625rem;
     border-radius: 1.5625rem 0rem 1.5625rem 0rem;
-    max-width: 18.75rem; /* Ancho máximo ajustado */
-    min-width: 12.5rem; /* Ancho mínimo para evitar problemas */
+    max-width: 18.75rem; 
+    min-width: 18.75rem; 
     
 }
 
@@ -628,7 +645,7 @@ color: var(--color-background); /* Color del texto del botón activo */
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin-top: .625rem;
     font-family: var(--font-family-primary);
     
@@ -683,7 +700,7 @@ color: var(--color-background); /* Color del texto del botón activo */
   background-color: var(--color-background);
    cursor: pointer;
     padding: 1.125rem;
-    width: 80%;
+    width: 100%;
     text-align: left;
     font-size: 1rem;
     
@@ -729,7 +746,7 @@ color: var(--color-background); /* Color del texto del botón activo */
     font-size: 1rem;
     border-radius: .625rem;
     text-align: justify;
-    width: 80%;
+    width: 100%;
     
 }
 
@@ -845,17 +862,8 @@ color: var(--color-background); /* Color del texto del botón activo */
     box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
 }
 
-/* .confirmation-message {
-    text-align: center;
-    margin-top: 1.25rem;
-    background-color: #e7f3fe;
-    
-    padding: .625rem;
-    border: .0625rem solid #bce8f1;
-    border-radius: .3125rem;
-} */
 
-.genre-select {
+.seleccionar__genero{
     margin-bottom: .625rem;
 }
 
@@ -934,16 +942,6 @@ color: var(--color-background); /* Color del texto del botón activo */
     
 }
 
-/* .confirmacion{
-    text-align: center;
-    margin-top: 1.25rem;
-    background-color: #e7f3fe;
-    color: #31708f;
-    padding: .625rem;
-    border: .0625rem solid #bce8f1;
-    border-radius: .3125rem;
-}
- */
 
 .contactform__container {
     max-width: 37.5rem;
@@ -1017,11 +1015,6 @@ color: var(--color-background); /* Color del texto del botón activo */
         align-items: center; /* Centra los elementos en dispositivos móviles */
     }
 
-    /* .header__secciones {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } */
     .header__secciones {
         order: 2;
     
@@ -1033,31 +1026,25 @@ color: var(--color-background); /* Color del texto del botón activo */
 
     .header__button {
         order: 3;
-        display: block; /* Muestra el botón de m
-
-    .logo__img {
-        order: -1;
-        margin: .625rem auto; /* Centra el logo */
+        display: block; /
     }
 
-    .nav__secciones {
-        display: none; /* Oculta la lista de navegación en pantallas pequeñas */
+    .nav__secciones{
+        display: none;
     }
-
 
 
     .header__secciones-movil {
-        display: none; /* Inicialmente oculta el menú desplegable */
+        display: none; 
     }
 
     .header__secciones-movil.active {
-        display: flex; /* Muestra el menú desplegable cuando está activo */
-        
+        display: flex; 
     
     }
     .main {
-        margin-top: 0; /* Elimina el margen superior para que empiece justo después del header */
-        padding-top: .625rem; /* Añade un espacio superior al contenido principal */
+        margin-top: 0; 
+        padding-top: .625rem;
     }
     .tabs {
         width: 100%;
@@ -1111,5 +1098,45 @@ color: var(--color-background); /* Color del texto del botón activo */
     .main__img-lateral{
         display: none;
     
+    }
+
+    .newsletter {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .newsletter h2 {
+        font-size: 1.25rem; 
+    }
+
+    .newsletter p {
+        font-size: 0.875rem; 
+    }
+
+    .newsletter input[type="email"] {
+      
+        padding: 0.5rem; 
+    }
+
+    .newsletter input[type="submit"] {
+        padding: 0.5rem 1rem; 
+        font-size: 0.875rem;
+    }
+
+    .newsletter__img {
+        max-width: 30%; 
+    }
+
+    .slider__card {
+        flex: 0 0 100%; /* Una tarjeta por fila en pantallas pequeñas */
+        max-width: 100%;
+        min-width: 100%;}
+}
+
+@media screen and (max-width: 1024px) {
+    .slider__card {
+        flex: 0 0 50%; /* Dos tarjetas por fila en pantallas medianas */
+        max-width: 45rem; /* Ajusta el ancho máximo para pantallas medianas */
+        min-width: 25rem; /* Ajusta el ancho mínimo para pantallas medianas */
     }
 }
