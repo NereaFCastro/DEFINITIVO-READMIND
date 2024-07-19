@@ -657,7 +657,7 @@ body::-ms-scrollbar-track {
 
 
 .contactform__container {
-    max-width: 36rem;
+    max-width: 400px;
     min-width: 18.75rem;
     margin: 1.25rem;
     padding: 3rem;
@@ -689,7 +689,7 @@ body::-ms-scrollbar-track {
     font-size: 1.25rem;
     border-radius: 50%;
     box-shadow: 0rem .25rem .5rem rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 99;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -1237,6 +1237,16 @@ body::-ms-scrollbar-track {
 
 
     }
+
+    .contactform__container {
+        max-width: 36rem;
+        min-width: 18.75rem;
+        margin: 1.25rem;
+        padding: 3rem;
+        background-color: #fff;
+        border-radius: .5rem;
+        box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+    }
 }
 
 @media (min-width: 758px) {
@@ -1452,5 +1462,15 @@ body::-ms-scrollbar-track {
         .logo__img {
             width: 8rem;
             margin: .9375rem;
+        }
+
+        .contactform__container {
+            max-width: 36rem;
+            min-width: 18.75rem;
+            margin: 1.25rem;
+            padding: 3rem;
+            background-color: #fff;
+            border-radius: .5rem;
+            box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
         }
     }
