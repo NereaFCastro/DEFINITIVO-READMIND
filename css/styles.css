@@ -569,7 +569,8 @@ color: var(--color-background);
     padding: 1.25rem;
     border-radius: .625rem;
     box-shadow: 0 .125rem .625rem rgba(0, 0, 0, 0.1);
-    width: 18.75rem;
+    max-width: 36rem;
+    min-width: 18.75rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -643,7 +644,7 @@ color: var(--color-background);
 
 
 .contactform__container {
-    max-width: 25rem;
+    max-width: 36rem;
     min-width: 18.75rem;
     margin: 1.25rem;
     padding: 3rem;
@@ -1065,8 +1066,8 @@ color: var(--color-background);
     }
 
     .contactform__container {
-        max-width: 37.5rem;
-        min-width: 18.75rem;
+        max-width: 33.5rem;
+        min-width: 15.75rem;
         margin: 1.25rem;
         padding: 3rem;
         background-color: #fff;
@@ -1163,7 +1164,8 @@ color: var(--color-background);
 
 
 .form__container {
-    width: 90%;
+    max-width: 36rem;
+    min-width: 18.75rem;
     padding: 1rem;
 }
 
