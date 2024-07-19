@@ -1,33 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.slider');
     const prevButton = document.querySelector('#prev');
     const nextButton = document.querySelector('#next');
+    const cards = document.querySelectorAll('.slider__card');
+
+    if (!slider || !prevButton || !nextButton || cards.length === 0) return;
+
     let currentIndex = 0;
-    const cardWidth = document.querySelector('.slider__card').offsetWidth + 
-                      parseFloat(getComputedStyle(document.querySelector('.slider__card')).marginLeft) + 
-                      parseFloat(getComputedStyle(document.querySelector('.slider__card')).marginRight);
+    const cardWidth = cards[0].offsetWidth;
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    function navigate(direction) {
+        const totalCards = cards.length;
+        currentIndex = (currentIndex + direction + totalCards) % totalCards;
+        const offset = -currentIndex * cardWidth;
+        slider.style.transform = `translateX(${offset}px)`; // Usa px en lugar de %
     }
 
-    function showNextCard() {
-        currentIndex++;
-        if (currentIndex >= slider.children.length) {
-            currentIndex = 0;
-        }
-        updateSlider();
-    }
+    nextButton.addEventListener('click', () => navigate(1));
+    prevButton.addEventListener('click', () => navigate(-1));
 
-    function showPrevCard() {
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = slider.children.length - 1;
-        }
-        updateSlider();
-    }
-
-    // Eventos de los botones
-    nextButton.addEventListener('click', showNextCard);
-    prevButton.addEventListener('click', showPrevCard);
+    // Inicializa el slider en la posición correcta
+    navigate(0);
 });
+

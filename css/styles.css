@@ -310,10 +310,11 @@ body::-ms-scrollbar-track {
     display: flex;
     transition: transform 0.2s ease-in-out;
     
+    
     }
 
 .slider__card {
-    flex: 0 0 33.33%;
+    flex: 0 0 auto;
     box-sizing: border-box;
     padding: 1.25rem;
     text-align: center;
@@ -1209,27 +1210,13 @@ color: var(--color-background);
     padding: .75rem;
 }
 
-.slider {
-    flex-wrap: nowrap;
-   
-}
 
-.slider__container {
+.slider__card {
+    width: 100%; /* Cada tarjeta ocupa el 100% del ancho del slider */
+    padding: 1rem;
     
-    width: 100%;
-    max-width: 75rem;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto; /* Centra el contenedor */
-    flex: 0 0 100%; /* Una tarjeta por fila */
-    }
 
-    .slider__card {
-      width: 100%;
-    
-    }
-
-}
+}}
 @media (min-width: 758px) {
 
 
