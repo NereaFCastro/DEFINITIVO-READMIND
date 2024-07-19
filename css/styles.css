@@ -1156,7 +1156,7 @@ color: var(--color-background);
     .nav__link {
         color: rgb(62, 62, 62);
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
        
     }
 
@@ -1259,7 +1259,7 @@ color: var(--color-background);
           padding: 1.125rem;
           width: 100%;
           text-align: left;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           
           font-family: var(--font-family-secondary);
           flex-direction: column;
@@ -1287,7 +1287,7 @@ color: var(--color-background);
         
         overflow: hidden;
         font-family: var(--font-family-primary);
-        font-size: 1.12rem;
+        font-size: 1.2rem;
         border-radius: .625rem;
         text-align: justify;
         width: 100%;
@@ -1309,5 +1309,27 @@ color: var(--color-background);
        
         
     }
+
+    h1{
+        font-size: 1.5rem;
+    }
     
+    .descripcion{
+        font-size: 1.2rem;
+    }
+
+    .newsletter {
+        padding: 1.25rem;
+        border-radius: 1.5625rem 0rem 1.5625rem 0rem;
+        text-align: center;
+        background-color: rgba(126, 212, 139, 0.5); 
+        box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1); 
+        max-width: 25.875rem;
+    
+    }
+
+    .newsletter p{
+        font-family: var(--font-family-primary);
+        font-size: 1.2rem;
+    }
 }
