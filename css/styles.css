@@ -183,7 +183,7 @@ body::-ms-scrollbar-track {
 .main__encabezado{
   font-size: 1.5rem;
     font-family: var(--font-family-secondary);
-    text-align: justify
+    text-align: center;
 
 }
 .intro__texto{
@@ -203,7 +203,7 @@ body::-ms-scrollbar-track {
     min-width: 18.75rem;
 }
 
-.main-imgsec{
+.main__img-lateral{
     width: 20%;
     height: 20%;
 
@@ -212,6 +212,8 @@ body::-ms-scrollbar-track {
 .quienessomos__box{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .main__quienessomos{
@@ -1097,5 +1099,10 @@ color: var(--color-background); /* Color del texto del botón activo */
     .button__precio {
         font-size: 1rem;
         padding: .7rem;
+    }
+
+    .main__img-lateral{
+        display: none;
+    
     }
 }
