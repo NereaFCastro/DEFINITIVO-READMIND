@@ -309,6 +309,7 @@ body::-ms-scrollbar-track {
     }
 
 .slider__card {
+    flex: 0 0 33.33%;
     box-sizing: border-box;
     padding: 1.25rem;
     text-align: center;
@@ -1067,7 +1068,9 @@ color: var(--color-background);
     }
 
     .header__secciones-movil.active {
-        display: flex; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
     
     }
     .main {
@@ -1163,7 +1166,7 @@ color: var(--color-background);
 
 .form__input {
     padding: .75rem;
-}}
+}
 
 .slider {
     flex-wrap: nowrap;
@@ -1178,13 +1181,10 @@ color: var(--color-background);
     overflow: hidden;
     position: relative;
     margin: 0 auto; /* Centra el contenedor */
-    
-    
-}{
     flex: 0 0 100%; /* Una tarjeta por fila */
+    }
+
 }
-
-
 @media (min-width: 758px) {
 
 
