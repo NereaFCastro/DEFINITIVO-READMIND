@@ -23,6 +23,10 @@ body {
     scrollbar-color: var(--color-secondary); /* Color de la barra de desplazamiento y del track */
 }
 
+input, button, textarea, select {
+    font: inherit;
+    }
+
   
 /* Estilo para navegadores basados en Trident/EdgeHTML (Internet Explorer y Edge antiguo) */
 body::-ms-scrollbar {
