@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // DECLARAMOS FUNCIONES
     const loginForm = document.getElementById('login__form');
     const loginConfirmationMessage = document.getElementById('confirmacion');
 
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         errorElement.style.display = 'none';
         input.style.borderColor = '#ccc';
     }
-
+// Añadimos carácteres que debe o no incluir un email
     function validateEmail(email) {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(String(email).toLowerCase());

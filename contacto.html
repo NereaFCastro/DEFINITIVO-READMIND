@@ -18,6 +18,7 @@
     <script src="js/scroll.js"></script>
 </head>
 <body>
+    <!-- Header común a todas las páginas -->
     <header class="header">
         <div class="header__secciones">
             <div class="header__logo">
@@ -40,6 +41,7 @@
         <button class="header__button" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>
+        <!-- Header formato móvil -->
         <div class="header__secciones-movil">
             <nav class="nav__movil">
                 <ul class="nav__secciones-movil">
@@ -55,6 +57,7 @@
         </div>
     </header>
 <main class="main">
+    <!-- Acordeón reutilizable -->
         <div class="acordeon">
             <button class="acordeon__item">¿Cómo funcionan los envíos?</button>
             <div class="acordeon__info">
@@ -92,6 +95,7 @@
             </div>
         </div>
     </div>
+    <!-- formulario reutilizable, con todo lo necesario para verificarse -->
     <div class="contactform__container">
         <h1 class="form__h1">Contáctanos</h1>
         <div class="contact__info">
@@ -100,6 +104,7 @@
         <p><strong>Correo electrónico:</strong> contacto@readmind.com</p>
         <p><strong>Teléfono:</strong> +34 123 456 789</p>
     </div>
+    <!-- añadimos url donde se almacenan nuestros datos -->
         <form action="https://ecampus.rocks/test-forms.php" method="get" id="contact__form" class="contact__form">
             <div class="form__grupo">
                 <label for="nombre" class="form__etiqueta">Nombre:</label>
@@ -126,7 +131,7 @@
         <i class="fas fa-arrow-up"></i>
     </a>
         </main>
-    
+    <!-- footer común a todas nuestras páginas -->
         <footer class="footer">
             
             <div class="footer__icons">

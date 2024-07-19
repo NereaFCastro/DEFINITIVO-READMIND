@@ -18,6 +18,7 @@
     <script src="js/pestanas.js"></script>
 </head>
 <body>
+    <!-- header común a todas las páginas -->
     <header class="header">
         <div class="header__secciones">
             <div class="header__logo">
@@ -40,6 +41,7 @@
         <button class="header__button" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>
+        <!-- header versión móvil -->
         <div class="header__secciones-movil">
             <nav class="nav__movil">
                 <ul class="nav__secciones-movil">
@@ -54,6 +56,7 @@
         </div>
     </header>
     <main class="main">
+        <!-- creamos un menú en pestañas que puede ser reutilizado -->
         <div class="tabs">
             <div class="tabs-buttons">
                 <div data-tab="pagina1" class="tabs-button">Lector solitario</div>
@@ -120,6 +123,7 @@
                 </div>
             </div>
         </div>
+        <!-- implementamos acordeon reutilizable -->
             <article class="acordeon__container">
 <h2 class="acordeon__h2">¿Cómo funciona <span class="destacado">READMIND</span>?</h2>
             <div class="acordeon">

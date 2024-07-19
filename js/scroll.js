@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // DECLARAMOS VARIABLES
     const scroll = document.querySelector('.icon__scroll');
 
-    // Mostrar u ocultar la flecha según la posición del scroll
+
+// DECLARAMOS FUNCIONES 
+    // Mostrar u ocultar la flecha si hacemos un scroll de más de 50px
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             scroll.style.display = 'block';

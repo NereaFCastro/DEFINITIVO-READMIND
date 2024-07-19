@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // DECLARAMOS VARIABLES
     const form = document.getElementById('suscripcion');
     const confirmacion = document.getElementById('confirmacion');
 
+
+// DECLARAMOS FUNCIONES
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevenir envío del formulario por defecto
 

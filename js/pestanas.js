@@ -1,8 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    // DECLARAMOS FUNCIONES
     const listaBotones = document.querySelector(".tabs-buttons");
     const listaContenidos = document.querySelectorAll(".tabs-contenido"); 
-
+// DECLARAMOS FUNCIONES
     listaBotones.addEventListener('click', (event) => {
         const boton = event.target.closest(".tabs-button");
 
