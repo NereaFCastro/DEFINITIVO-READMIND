@@ -302,14 +302,12 @@ body::-ms-scrollbar-track {
 }
 
 .slider {
-    flex: 0 0 33.33%;
     display: flex;
     transition: transform 0.2s ease-in-out;
     
     }
 
 .slider__card {
-    flex: 0 0 33.33%; /* Tres tarjetas por fila */
     box-sizing: border-box;
     padding: 1.25rem;
     text-align: center;
@@ -1057,7 +1055,15 @@ color: var(--color-background);
         order: 3;
         display: block; /
     }
+    .slider {
+        flex-wrap: nowrap;
+        width: 100%; /* Mostrar una tarjeta a la vez */
+    }
 
+    .slider__card {
+        flex: 0 0 100%; /* Una tarjeta por fila */
+    }
+}
     .nav__secciones{
         display: none;
     }
@@ -1150,7 +1156,8 @@ color: var(--color-background);
         flex: 0 0 100%; /* Una tarjeta por fila en pantallas pequeñas */
         max-width: 100%;
         min-width: 100%;}
-}
+
+
 
 .form__container {
     width: 90%;
@@ -1167,6 +1174,17 @@ color: var(--color-background);
 
 .form__input {
     padding: .75rem;
+}
+
+@media (min-width: 758px) {
+    .slider {
+        flex-wrap: nowrap;
+        width: calc(100% * 3); /* Mostrar 3 tarjetas a la vez */
+    }
+
+    .slider__card {
+        flex: 0 0 33.33%; /* Tres tarjetas por fila */
+    }
 }
 
 @media screen and (min-width: 1200px) {
