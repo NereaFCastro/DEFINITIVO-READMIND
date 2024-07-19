@@ -1045,6 +1045,7 @@ color: var(--color-background);
     .header {
         flex-direction: row; /* Cambia a dirección vertical en pantallas más pequeñas */
         align-items: center; /* Centra los elementos en dispositivos móviles */
+        justify-content: center;
     }
 
     .header__secciones {
@@ -1058,7 +1059,7 @@ color: var(--color-background);
 
     .header__button {
         order: 3;
-        display: block; /
+        display: block;
     }
  
     .nav__secciones{
