@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardWidth = cards[0].offsetWidth;
 
 // DECLARAMOS FUNCIONES
-// Este parte de código está verificada con inteligencia artifical
+// Este parte de código está extraida de https://codepen.io/hershkirsh/pen/BXBprB y adaptada con inteligencia artifical
     function navigate(direction) {
         const totalCards = cards.length;
         index = (index + direction + totalCards) % totalCards;
