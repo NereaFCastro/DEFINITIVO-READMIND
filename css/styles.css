@@ -1181,8 +1181,7 @@ color: var(--color-background);
 
 .slider {
     flex-wrap: nowrap;
-    width: 100%; /* Mostrar una tarjeta a la vez */
-    
+   
 }
 
 .slider__container {
@@ -1193,6 +1192,11 @@ color: var(--color-background);
     position: relative;
     margin: 0 auto; /* Centra el contenedor */
     flex: 0 0 100%; /* Una tarjeta por fila */
+    }
+
+    .slider__card {
+        width: 0 0 100%; /* Mostrar una tarjeta a la vez */
+    
     }
 
 }
