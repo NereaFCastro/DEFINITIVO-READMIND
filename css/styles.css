@@ -1111,7 +1111,10 @@ color: var(--color-background);
     }
 
 
-
+.login__container{
+    max-width: 36rem;
+    min-width: 18.75rem;
+}
 
     .tabs-buttons {
         gap: 20px;
