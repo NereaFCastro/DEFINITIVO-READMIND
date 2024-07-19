@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Slider
     const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.employee-card');
+    const slides = document.querySelectorAll('.slider__card');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
     let currentIndex = 0;
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //     const prevButton = document.getElementById("prevButton");
         //     const nextButton = document.getElementById("nextButton");
         
-        //     const cards = document.querySelectorAll(".employee-card");
+        //     const cards = document.querySelectorAll(".slider__card");
         //     const cardWidth = cards[0].offsetWidth;
         //     const visibleCards = 3; // Número de tarjetas visibles al inicio
         //     let currentIndex = 0;

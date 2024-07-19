@@ -15,6 +15,7 @@
     <script src="js/planes.js" defer></script>
     <script src="menu.js"></script>
     <script src="js/scroll.js" defer></script>
+    <script src="js/pestanas.js"></script>
 </head>
 <body>
     <header class="header">
@@ -51,91 +52,104 @@
         </div>
     </header>
     <main class="main">
-        <div class="pricing-table">
-            <div class="pricing-card">
-                <h2>Lector Solitario</h2>
-                <p class="price">12€ / mes</p>
-                <p>
-                    Recibirás un libro al mes de tu género preferido, disfrutando de la tranquilidad de leer a tu propio ritmo, sin presiones ni compromisos adicionales. Además, recibe recomendaciones de nuestros expertos.
-                </p>
-                <a href="http://127.0.0.1:5501/suscripcion.html" class="signup-btn">¡Ideal para mí!</a>
+        <div class="tabs">
+            <div class="tabs-buttons">
+                <div data-tab="pagina1" class="tabs-button">Lector solitario</div>
+                <div data-tab="pagina2" class="tabs-button tabs-button-active">Lector amigo</div>
+                <div data-tab="pagina3" class="tabs-button">Lector voraz</div>
             </div>
-            <div class="pricing-card">
-                <h2>Lector Amigo</h2>
-                <p class="price">15€ / mes</p>
+            <div id="pagina1" class="tabs-contenido">
+                
                 <ul>
                     <li>Recibirás un libro al mes de tu género preferido</li>
-                    <li>Participa en debates con otros apasionados de la lectura, enriqueciendo tu experiencia y perspectiva.</li>
+                    <li> Disfruta de la tranquilidad de leer a tu propio ritmo, sin presiones ni compromisos adicionales. </li>
+                   
+                </ul>
+                <p class="precio">12€ / mes</p>
+                <a href="http://127.0.0.1:5501/suscripcion.html" class="button__precio">¡Ideal para mí!</a>
+                
+            </div>
+            <div id="pagina2" class="tabs-contenido u-visible">
+               
+                <ul>
+                    <li>Recibirás un libro al mes de tu género preferido</li>
+                    <li> Participa en debates con otros lectores enriqueciendo tu experiencia y perspectiva</li>
                     <li>Accede a foros y eventos en línea</li>
                 </ul>
-                <a href="http://127.0.0.1:5501/suscripcion.html" class="signup-btn">¡Únete a la comunidad!</a>
+                <p class="precio">15€ / mes</p>
+                <a href="http://127.0.0.1:5501/suscripcion.html" class="button__precio">¡Únete a la comunidad!</a>
+    
             </div>
-            <div class="pricing-card">
-                <h2>Lector Voraz</h2>
-                <p class="price">25€ / mes</p>
+            <div id="pagina3" class="tabs-contenido">
+               
                 <ul>
                     <li>Tres libros al mes, de un mismo género de hasta tres diferentes</li>
                     <li>Acceso ilimitado a todos los debates y foros</li>
                     <li>Participa en eventos exclusivos y obtén recomendaciones personalizadas</li>
                 </ul>
-                <a href="http://127.0.0.1:5501/suscripcion.html" class="signup-btn">¡Si quiero!</a>
+                <p class="precio">25€ / mes</p>
+                <a href="http://127.0.0.1:5501/suscripcion.html" class="button__precio">¡Si quiero!</a>
+            </div>
+            
+        </div>
+
+        <div class="container__plans">
+            <h1 class="container__plans--h1">¡Únete a  <span class="destacado">READ MIND</span>!</h1>
+            <p class="descripcion">En <span class="destacado">READ MIND</span>, ofrecemos una experiencia única y enriquecedora para todos los amantes de los libros. Tenemos tres planes de suscripción diseñados para adaptarse a diferentes tipos de lectores. A continuación, te explicamos cada uno de ellos:</p>
+    
+            <div class="plan">
+                <h2 class="plan__h2">Lector Solitario - 12€ / mes</h2>
+                <div class="plan__info">
+                    <p class="descripcion">Este plan está diseñado para aquellos que disfrutan de la lectura de manera independiente. Con el plan Lector Solitario, recibirás un libro al mes relacionado con la temática literaria que prefieras. Puedes elegir entre nuestras variadas temáticas, asegurándote de que siempre tengas un libro que te apasione. Este plan es perfecto para sumergirte en la lectura a tu propio ritmo sin compromisos adicionales.</p>
+                </div>
+            </div>
+    
+            <div class="plan">
+                <h2 class="plan__h2">Lector Amigo - 15€ / mes</h2>
+                <div class="plan__info">
+                    <p class="descripcion">El plan Lector Amigo es ideal para quienes disfrutan de la lectura y también valoran la interacción con otros lectores. Al igual que en el plan Lector Solitario, recibirás un libro al mes de tu temática literaria favorita. Además, tendrás la oportunidad de participar en debates exclusivos con otros miembros del club. Estos debates se llevan a cabo en foros y eventos en línea, permitiéndote compartir tus opiniones y descubrir nuevas perspectivas sobre los libros que lees.</p>
+                </div>
+            </div>
+    
+            <div class="plan">
+                <h2 class="plan__h2">Lector Voraz - 25€ / mes</h2>
+                <div class="plan__info">
+                    <p class="descripcion">Si eres un ávido lector y te encanta explorar diferentes géneros, el plan Lector Voraz es para ti. Este plan te permite recibir tres libros al mes, cada uno de una temática literaria diferente que elijas. Además de disfrutar de una mayor variedad de lecturas, tendrás acceso ilimitado a todos los debates y foros del club. También podrás participar en eventos exclusivos y recibir recomendaciones personalizadas de nuestro equipo de expertos. Este plan ofrece la experiencia de lectura más completa y enriquecedora.</p>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <h1 class="title">¡Únete a  <span class="destacado">READ MIND</span>!</h1>
-            <p class="description">En <span class="destacado">READ MIND</span>, ofrecemos una experiencia única y enriquecedora para todos los amantes de los libros. Tenemos tres planes de suscripción diseñados para adaptarse a diferentes tipos de lectores. A continuación, te explicamos cada uno de ellos:</p>
-    
-            <div class="plan">
-                <h2 class="plan-title">Lector Solitario - 12€ / mes</h2>
-                <div class="acordeon_info">
-                    <p class="plan-description">Este plan está diseñado para aquellos que disfrutan de la lectura de manera independiente. Con el plan Lector Solitario, recibirás un libro al mes relacionado con la temática literaria que prefieras. Puedes elegir entre nuestras variadas temáticas, asegurándote de que siempre tengas un libro que te apasione. Este plan es perfecto para sumergirte en la lectura a tu propio ritmo sin compromisos adicionales.</p>
-                </div>
-            </div>
-    
-            <div class="plan">
-                <h2 class="plan-title">Lector Amigo - 15€ / mes</h2>
-                <div class="acordeon_info">
-                    <p class="plan-description">El plan Lector Amigo es ideal para quienes disfrutan de la lectura y también valoran la interacción con otros lectores. Al igual que en el plan Lector Solitario, recibirás un libro al mes de tu temática literaria favorita. Además, tendrás la oportunidad de participar en debates exclusivos con otros miembros del club. Estos debates se llevan a cabo en foros y eventos en línea, permitiéndote compartir tus opiniones y descubrir nuevas perspectivas sobre los libros que lees.</p>
-                </div>
-            </div>
-    
-            <div class="plan">
-                <h2 class="plan-title">Lector Voraz - 25€ / mes</h2>
-                <div class="acordeon_info">
-                    <p class="plan-description">Si eres un ávido lector y te encanta explorar diferentes géneros, el plan Lector Voraz es para ti. Este plan te permite recibir tres libros al mes, cada uno de una temática literaria diferente que elijas. Además de disfrutar de una mayor variedad de lecturas, tendrás acceso ilimitado a todos los debates y foros del club. También podrás participar en eventos exclusivos y recibir recomendaciones personalizadas de nuestro equipo de expertos. Este plan ofrece la experiencia de lectura más completa y enriquecedora.</p>
-                </div>
-            </div>
-    
-            <h2 class="subtitle">¿Cómo funciona <span class="destacado">READMIND</span>?</h2>
-            <div class="accordion">
-                <button class="accordion-item">Elige tu plan de suscripción</button>
-                <div class="panel">
+            <article class="acordeon__container">
+<h2 class="acordeon__h2">¿Cómo funciona <span class="destacado">READMIND</span>?</h2>
+            <div class="acordeon">
+                <button class="acordeon__item">Elige tu plan de suscripción</button>
+                <div class="acordeon__info">
                     <p>Selecciona el plan que mejor se adapte a tus intereses y hábitos de lectura: Lector Solitario, Lector Amigo o Lector Voraz.</p>
                 </div>
     
-                <button class="accordion-item">Elige tus temáticas literarias</button>
-                <div class="panel">
+                <button class="acordeon__item">Elige tus temáticas literarias</button>
+                <div class="acordeon__info">
                     <p>Dependiendo del plan que elijas, podrás seleccionar una o hasta tres temáticas literarias de nuestra amplia selección. Estas temáticas pueden incluir desde ficción contemporánea hasta misterio, fantasía, no ficción y más.</p>
                 </div>
     
-                <button class="accordion-item">Recibe tus libros</button>
-                <div class="panel">
+                <button class="acordeon__item">Recibe tus libros</button>
+                <div class="acordeon__info">
                     <p>Cada mes, recibirás tus libros cuidadosamente seleccionados según las temáticas que elegiste. Los libros serán enviados directamente a la dirección de tu elección sin coste añadido.</p>
                 </div>
     
-                <button class="accordion-item">Participa en la comunidad</button>
-                <div class="panel">
+                <button class="acordeon__item">Participa en la comunidad</button>
+                <div class="acordeon__info">
                     <p>Si has elegido un plan que incluye acceso a la comunidad, podrás unirte a nuestros foros y debates en línea. Comparte tus opiniones, participa en discusiones y conecta con otros amantes de los libros.</p>
                 </div>
     
-                <button class="accordion-item">Disfruta de eventos exclusivos y recomendaciones</button>
-                <div class="panel">
+                <button class="acordeon__item">Disfruta de eventos exclusivos y recomendaciones</button>
+                <div class="acordeon__info">
                     <p>Como Lector Voraz, tendrás acceso a eventos exclusivos y recibirás recomendaciones personalizadas de libros. Estos eventos pueden incluir charlas con autores, talleres de lectura y más.</p>
                 </div>
             </div>
-            
-    
-            <p class="final-description"><span class="destacado">READ MIND</span> está diseñado para ofrecerte una experiencia literaria rica y variada, adaptándose a tus gustos y preferencias. Únete a nuestra comunidad y descubre un mundo de libros y conversaciones apasionantes. ¡Estamos emocionados de tenerte con nosotros!</p>
+        </article>
+           
+    <div class="container__plans">
+            <p class="descripcion"><span class="destacado">READ MIND</span> está diseñado para ofrecerte una experiencia literaria rica y variada, adaptándose a tus gustos y preferencias. Únete a nuestra comunidad y descubre un mundo de libros y conversaciones apasionantes. ¡Estamos emocionados de tenerte con nosotros!</p>
         </div>
         <a href="http://127.0.0.1:5501/contacto.html#contact-form-title" class="icon__contacto">
             <i class="fas fa-envelope"></i>

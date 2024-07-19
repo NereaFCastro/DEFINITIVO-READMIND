@@ -1,124 +1,99 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('suscripcion');
-    const mensajeConfirmacion = document.getElementById('confirmation-message');
+    const confirmacion = document.getElementById('confirmacion');
 
-    const nombre = document.getElementById('nombre');
-    const apellidos = document.getElementById('apellidos');
-    const email = document.getElementById('email');
-    const confirmEmail = document.getElementById('confirm__email');
-    const password = document.getElementById('password');
-    const confirmPassword = document.getElementById('confirm__password');
-    const plan = document.getElementById('plan');
-    const unicoGenero = document.getElementById('unico__genero');
-    const multipleGenero = document.getElementById('multiple-genre');
-
-    const errorNombre = document.getElementById('error__nombre');
-    const errorApellidos = document.getElementById('error__apellidos');
-    const errorEmail = document.getElementById('error__email');
-    const errorConfirmEmail = document.getElementById('error__confirm-email');
-    const errorPassword = document.getElementById('error__password');
-    const errorConfirmPassword = document.getElementById('error__confirm-password');
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir envío del formulario por defecto
 
         if (validateForm()) {
             form.style.display = 'none';
-            mensajeConfirmacion.style.display = 'block';
-        }
-    });
-
-    form.addEventListener('reset', function () {
-        form.reset();
-        resetValidation();
-        form.style.display = 'block';
-        mensajeConfirmacion.style.display = 'none';
-    });
-
-    plan.addEventListener('change', function () {
-        if (plan.value === 'voraz') {
-            unicoGenero.style.display = 'none';
-            multipleGenero.style.display = 'block';
-        } else {
-            unicoGenero.style.display = 'block';
-            multipleGenero.style.display = 'none';
+            confirmacion.style.display = 'block';
         }
     });
 
     function validateForm() {
         let isValid = true;
 
-        if (nombre.value.trim() === '') {
-            showError(nombre, errorNombre, 'El nombre es obligatorio');
-            isValid = false;
-        } else {
-            hideError(nombre, errorNombre);
-        }
-
-        if (apellidos.value.trim() === '') {
-            showError(apellidos, errorApellidos, 'Los apellidos son obligatorios');
-            isValid = false;
-        } else {
-            hideError(apellidos, errorApellidos);
-        }
-
-        if (!validateEmail(email.value)) {
-            showError(email, errorEmail, 'El correo electrónico no es válido');
-            isValid = false;
-        } else {
-            hideError(email, errorEmail);
-        }
-
-        if (email.value !== confirmEmail.value) {
-            showError(confirmEmail, errorConfirmEmail, 'Los correos electrónicos no coinciden');
-            isValid = false;
-        } else {
-            hideError(confirmEmail, errorConfirmEmail);
-        }
-
-        if (password.value.length < 8) {
-            showError(password, errorPassword, 'La contraseña debe tener al menos 8 caracteres');
-            isValid = false;
-        } else {
-            hideError(password, errorPassword);
-        }
-
-        if (password.value !== confirmPassword.value) {
-            showError(confirmPassword, errorConfirmPassword, 'Las contraseñas no coinciden');
-            isValid = false;
-        } else {
-            hideError(confirmPassword, errorConfirmPassword);
-        }
+        // Validación de nombre
+        if (!validateField('nombre')) isValid = false;
+        // Validación de apellidos
+        if (!validateField('apellidos')) isValid = false;
+        // Validación de email
+        if (!validateEmail()) isValid = false;
+        // Validación de confirmación de email
+        if (!validateConfirmEmail()) isValid = false;
+        // Validación de contraseña
+        if (!validatePassword()) isValid = false;
+        // Validación de confirmación de contraseña
+        if (!validateConfirmPassword()) isValid = false;
 
         return isValid;
     }
 
-    function showError(input, errorElement, message) {
-        errorElement.textContent = message;
-        errorElement.style.display = 'block';
-        input.style.borderColor = 'red';
+    function validateField(id) {
+        const field = document.getElementById(id);
+        const errorSpan = document.getElementById(`error__${id}`);
+        
+        if (field.value.trim() === '') {
+            errorSpan.textContent = `El campo ${id} es obligatorio.`;
+            return false;
+        } else {
+            errorSpan.textContent = '';
+            return true;
+        }
     }
 
-    function hideError(input, errorElement) {
-        errorElement.style.display = 'none';
-        input.style.borderColor = '#ccc';
+    function validateEmail() {
+        const email = document.getElementById('email');
+        const errorSpan = document.getElementById('error__email');
+        
+        if (!email.value.includes('@')) {
+            errorSpan.textContent = 'Por favor, ingrese un correo electrónico válido.';
+            return false;
+        } else {
+            errorSpan.textContent = '';
+            return true;
+        }
     }
 
-    function validateEmail(email) {
-        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return re.test(String(email).toLowerCase());
+    function validateConfirmEmail() {
+        const email = document.getElementById('email').value;
+        const confirmEmail = document.getElementById('confirm__email').value;
+        const errorSpan = document.getElementById('error__confirm-email');
+        
+        if (email !== confirmEmail) {
+            errorSpan.textContent = 'Los correos electrónicos no coinciden.';
+            return false;
+        } else {
+            errorSpan.textContent = '';
+            return true;
+        }
     }
 
-    function resetValidation() {
-        const errorMessages = document.querySelectorAll('.mensaje__error');
-        errorMessages.forEach(function (errorMessage) {
-            errorMessage.style.display = 'none';
-        });
+    function validatePassword() {
+        const password = document.getElementById('password');
+        const errorSpan = document.getElementById('error__password');
+        
+        if (password.value.length < 8) {
+            errorSpan.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+            return false;
+        } else {
+            errorSpan.textContent = '';
+            return true;
+        }
+    }
 
-        const inputs = document.querySelectorAll('.form__input');
-        inputs.forEach(function (input) {
-            input.style.borderColor = '#ccc';
-        });
+    function validateConfirmPassword() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm__password').value;
+        const errorSpan = document.getElementById('error__confirm-password');
+        
+        if (password !== confirmPassword) {
+            errorSpan.textContent = 'Las contraseñas no coinciden.';
+            return false;
+        } else {
+            errorSpan.textContent = '';
+            return true;
+        }
     }
 });
-

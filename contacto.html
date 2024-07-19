@@ -52,70 +52,71 @@
         </div>
     </header>
 <main class="main">
-        <div class="accordion">
-            <button class="accordion-item">¿Cómo funcionan los envíos?</button>
-            <div class="panel">
+        <div class="acordeon">
+            <button class="acordeon__item">¿Cómo funcionan los envíos?</button>
+            <div class="acordeon__info">
                 <p>Los libros se envían el primer día hábil de cada mes. Recibirás un correo electrónico con el número de seguimiento una vez que se haya enviado tu libro.</p>
             </div>
 
-            <button class="accordion-item">¿Puedo cambiar la temática de mi suscripción?</button>
-            <div class="panel">
+            <button class="acordeon__item">¿Puedo cambiar la temática de mi suscripción?</button>
+            <div class="acordeon__info">
                 <p>Sí, puedes cambiar la temática de tu suscripción en tu perfil o enviándonos un correo electrónico a soporte@readmind.com antes del 25 de cada mes.</p>
             </div>
 
-            <button class="accordion-item">¿Cómo puedo darme de baja de la suscripción?</button>
-            <div class="panel">
+            <button class="acordeon__item">¿Cómo puedo darme de baja de la suscripción?</button>
+            <div class="acordeon__info">
                 <p>Para darte de baja, simplemente accede a tu perfil y sigue las instrucciones en la sección de administración de suscripciones. También puedes contactarnos a soporte@readmind.com para asistencia.</p>
             </div>
 
-            <button class="accordion-item">¿Qué métodos de pago aceptan?</button>
-            <div class="panel">
+            <button class="acordeon__item">¿Qué métodos de pago aceptan?</button>
+            <div class="acordeon__info">
                 <p>Aceptamos únicamente tarjeta de débito o crédito.</p>
             </div>
 
-            <button class="accordion-item">¿Cómo puedo sugerir un libro para que sea considerado en las futuras selecciones del club de lectura?</button>
-            <div class="panel">
+            <button class="acordeon__item">¿Cómo puedo sugerir un libro para que sea considerado en las futuras selecciones del club de lectura?</button>
+            <div class="acordeon__info">
                 <p>Puedes sugerir un libro enviándonos un correo electrónico a sugerencias@readmind.com con el título del libro, el autor y una breve descripción de por qué crees que sería una buena elección para nuestros miembros. ¡Estamos siempre abiertos a nuevas recomendaciones!</p>
             </div>
 
-            <button class="accordion-item">¿Qué pasa si no recibo mi libro?</button>
-            <div class="panel">
+            <button class="acordeon__item">¿Qué pasa si no recibo mi libro?</button>
+            <div class="acordeon__info">
                 <p>Si no recibes tu libro, por favor contáctanos a soporte@readmind.com y te ayudaremos a rastrear el envío o a enviar un reemplazo si es necesario.</p>
             </div>
 
-            <button class="accordion-item">¿Cómo puedo actualizar mi información de pago?</button>
-            <div class="panel">
+            <button class="acordeon__item">¿Cómo puedo actualizar mi información de pago?</button>
+            <div class="acordeon__info">
                 <p>Puedes actualizar tu información de pago accediendo a tu perfil y seleccionando la opción de actualizar información de pago. También puedes contactarnos para obtener asistencia.</p>
             </div>
         </div>
     </div>
-    <div class="contact-form-container">
-        <h1 class="contact-form-title">Contáctanos</h1>
-        <p class="contact-form-text">En <span class="destacado">READ MIND</span>, nuestros clientes son nuestra prioridad. Valoramos mucho tus opiniones y estamos aquí para ayudar en lo que necesites. No dudes en contactar con nosotros a través de este formulario, correo electrónico o por teléfono. ¡Nos encantaría escucharte!</p>
+    <div class="contactform__container">
+        <h1 class="form__h1">Contáctanos</h1>
+        <div class="contact__info">
+        <p>En <span class="destacado">READ MIND</span>, nuestros clientes son nuestra prioridad. Valoramos mucho tus opiniones y estamos aquí para ayudar en lo que necesites. No dudes en contactar con nosotros a través de este formulario, correo electrónico o por teléfono. ¡Nos encantaría escucharte!</p>
         
-        <p class="contact-form-info"><strong>Correo electrónico:</strong> contacto@readmind.com</p>
-        <p class="contact-form-info"><strong>Teléfono:</strong> +34 123 456 789</p>
-        
-        <form id="contact-form" class="contact-form">
-            <div class="contact-form-group">
-                <label for="contact-form-name" class="contact-form-label">Nombre:</label>
-                <input type="text" id="contact-form-name" name="contact-form-name" class="contact-form-input" required>
+        <p><strong>Correo electrónico:</strong> contacto@readmind.com</p>
+        <p><strong>Teléfono:</strong> +34 123 456 789</p>
+    </div>
+        <form action="https://ecampus.rocks/test-forms.php" method="get" id="contact__form" class="contact__form">
+            <div class="form__grupo">
+                <label for="nombre" class="form__etiqueta">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form__input" required>
             </div>
-            <div class="contact-form-group">
-                <label for="contact-form-email" class="contact-form-label">Correo electrónico:</label>
-                <input type="email" id="contact-form-email" name="contact-form-email" class="contact-form-input" required>
+            <div class="form__grupo">
+                <label for="email" class="form__etiqueta">Correo electrónico:</label>
+                <input type="email" id="email" name="email" class="form__input" required>
             </div>
-            <div class="contact-form-group">
-                <label for="contact-form-message" class="contact-form-label">Mensaje:</label>
-                <textarea id="contact-form-message" name="contact-form-message" class="contact-form-input" rows="5" required></textarea>
+            <div class="form__grupo">
+                <label for="mensaje" class="form__etiqueta">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" class="form__input" rows="5" required></textarea>
             </div>
-            <button type="submit" class="contact-form-button">Enviar mensaje</button>
+            <button type="submit" class="button__form">Enviar mensaje</button>
         </form>
-        <div id="contact-form-confirmation-message" class="contact-form-confirmation-message" style="display: none;">
-            <p>Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo en el menor tiempo posible.¡Gracias!</p>
+        <div id="confirmacion" class="confirmacion">
+            <p>Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo en el menor tiempo posible. ¡Gracias!</p>
         </div>
     </div>
-    <a href="http://127.0.0.1:5501/contacto.html#contact-form-title" class="icon__contacto">
+    <a href="http://127.0.0.1:5501/contacto.html#contact__form-title" class="icon__contacto">
         <i class="fas fa-envelope"></i>
     </a>
     <a href="#" class="icon__scroll">

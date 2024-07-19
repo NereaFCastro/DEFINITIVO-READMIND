@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Selector para todos los elementos del acordeón
-    const accordionItems = document.querySelectorAll('.accordion-item');
-    const panels = document.querySelectorAll('.panel');
+    const acordeonItems = document.querySelectorAll('.acordeon__item');
+    const acordeon__infos = document.querySelectorAll('.acordeon__info');
 
-    accordionItems.forEach((item, index) => {
+    acordeonItems.forEach((item, index) => {
         item.addEventListener('click', () => {
-            // Si el panel correspondiente ya está abierto, ciérralo
-            if (panels[index].classList.contains('active')) {
-                panels[index].classList.remove('active');
+            // Si el acordeon__info correspondiente ya está abierto, ciérralo
+            if (acordeon__infos[index].classList.contains('active')) {
+                acordeon__infos[index].classList.remove('active');
             } else {
-                // Primero cierra todos los paneles activos
-                panels.forEach(panel => panel.classList.remove('active'));
-                // Luego abre el panel correspondiente
-                panels[index].classList.add('active');
+                // Primero cierra todos los acordeon__infoes activos
+                acordeon__infos.forEach(acordeon__info => acordeon__info.classList.remove('active'));
+                // Luego abre el acordeon__info correspondiente
+                acordeon__infos[index].classList.add('active');
             }
         });
     });
