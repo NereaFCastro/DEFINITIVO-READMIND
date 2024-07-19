@@ -116,9 +116,7 @@ body::-ms-scrollbar-track {
     flex-shrink: 0;
 }
 
-.header__login{
-    margin-right: -23px;
-}
+
 
 .header__secciones{
     display: flex;
@@ -1061,6 +1059,9 @@ color: var(--color-background);
 
     .header__login {
         order: 1;
+        
+        margin-right: -35px;
+        
         
 
     }
