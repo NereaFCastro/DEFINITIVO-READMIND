@@ -1160,6 +1160,7 @@ body::-ms-scrollbar-track {
     .login__container {
         max-width: 36rem;
         min-width: 18.75rem;
+        padding: 1rem;
     }
 
     .tabs-buttons {
@@ -1242,7 +1243,7 @@ body::-ms-scrollbar-track {
         max-width: 36rem;
         min-width: 18.75rem;
         margin: 1.25rem;
-        padding: 3rem;
+        padding: 1rem;
         background-color: #fff;
         border-radius: .5rem;
         box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
