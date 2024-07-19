@@ -1,24 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
 
-}
 
-button,
-input[type="button"],
-input[type="submit"] {
-    -webkit-appearance: none; /* Elimina la apariencia por defecto en Webkit (Chrome, Safari) */
-    -moz-appearance: none; /* Elimina la apariencia por defecto en Firefox */
-    appearance: none; /* Elimina la apariencia por defecto en otros navegadores compatibles */
-    border: none; /* Elimina cualquier borde por defecto */
-    background: none; /* Elimina cualquier fondo por defecto */
-    padding: 0; /* Elimina cualquier relleno por defecto */
-    margin: 0; /* Elimina cualquier margen por defecto */
-    font: inherit; /* Hereda la fuente del elemento padre */
-    color: inherit; /* Hereda el color del texto del elemento padre */
-    text-align: inherit; /* Hereda la alineación del texto del elemento padre */
-    cursor: pointer; /* Cambia el cursor a pointer */}
 
 body{
     --font-family-primary: "museomoderno", sans-serif;
@@ -210,7 +191,7 @@ body::-ms-scrollbar-track {
 }
 .intro__texto{
     font-size: 1.5rem;
-    font-family: "musemoderno";
+    font-family: var(--font-family-primary);
     font-weight: 300;
     line-height: 150%;
     flex-wrap: wrap;
