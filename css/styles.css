@@ -146,6 +146,7 @@ body::-ms-scrollbar-track {
     box-shadow: 0rem .5rem 1rem 0rem rgba(0,0,0,0.2); 
     z-index: 1;
 
+
 }
 
 
@@ -1045,7 +1046,7 @@ color: var(--color-background);
     .header {
         flex-direction: row; /* Cambia a dirección vertical en pantallas más pequeñas */
         align-items: center; /* Centra los elementos en dispositivos móviles */
-        justify-content: center;
+       
     }
 
     .header__secciones {
@@ -1081,9 +1082,20 @@ color: var(--color-background);
     }
 
     .header__secciones-movil.active {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            background-color:var(--color-background);
+            box-shadow: 0rem .5rem 1rem 0rem rgba(0,0,0,0.2); 
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        
+        
+        }
     
     }
     .main {
@@ -1201,7 +1213,9 @@ color: var(--color-background);
     }
 
     .slider__card {
-        width: 0 0 100%; /* Mostrar una tarjeta a la vez */
+        max-width: 36rem;
+        min-width: 18.75rem;
+        
     
     }
 
