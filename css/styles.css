@@ -643,7 +643,7 @@ color: var(--color-background);
 
 
 .contactform__container {
-    max-width: 37.5rem;
+    max-width: 25rem;
     min-width: 18.75rem;
     margin: 1.25rem;
     padding: 3rem;
@@ -1064,6 +1064,14 @@ color: var(--color-background);
         display: none;
     }
 
+    .contactform__container {
+       width: 90%;
+        margin: 1.25rem;
+        padding: 3rem;
+        background-color: #fff;
+        border-radius: .5rem;
+        box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+    }
 
     .header__secciones-movil {
         display: none; 
