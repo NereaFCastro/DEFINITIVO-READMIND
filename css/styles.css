@@ -1314,10 +1314,13 @@ color: var(--color-background);
         font-size: 1.5rem;
     }
     
-    .descripcion{
+    .descripcion {
         font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--color-text);
+        font-family: var(--font-family-primary);
+        text-align:justify;
     }
-
     .newsletter {
         padding: 1.25rem;
         border-radius: 1.5625rem 0rem 1.5625rem 0rem;
