@@ -1152,6 +1152,23 @@ color: var(--color-background);
         min-width: 100%;}
 }
 
+.form__container {
+    width: 90%;
+    padding: 1rem;
+}
+
+.form__h1 {
+    font-size: 1.5rem; /* Ajusta el tamaño del título si es necesario */
+}
+
+.form__grupo {
+    margin-bottom: .75rem;
+}
+
+.form__input {
+    padding: .75rem;
+}
+
 @media screen and (min-width: 1200px) {
     .nav__link {
         color: rgb(62, 62, 62);
