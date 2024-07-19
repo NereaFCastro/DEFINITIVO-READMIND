@@ -17,7 +17,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--color-background);
-    font-size: .75rem;
     min-height: 100vh;
     scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
     scrollbar-color: var(--color-secondary); /* Color de la barra de desplazamiento y del track */
@@ -53,7 +52,17 @@ body::-ms-scrollbar-track {
     border: 2px solid  rgb(255, 253, 246); 
 }
 
+.destacado{
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+}
 
+.logo__img{
+    width: 6.25rem;
+    margin: .9375rem;
+}
+
+/* ESTILOS HEADER  */
 .header {
     display: flex;
     color: var(--color-text);
@@ -66,19 +75,10 @@ body::-ms-scrollbar-track {
     font-style: normal;
     border-bottom: .0625rem solid rgb(62, 62, 62);
     position: relative;
-    font-size: 1rem;
+    
     
 }
 
-.destacado{
-    font-family: var(--font-family-primary);
-    font-weight: 400;
-}
-
-.logo__img{
-    width: 6.25rem;
-    margin: .9375rem;
-}
 
 .nav__secciones {
     justify-content: center;
@@ -102,7 +102,7 @@ body::-ms-scrollbar-track {
 .nav__link {
     color: rgb(62, 62, 62);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
    
 }
 
@@ -180,6 +180,7 @@ body::-ms-scrollbar-track {
     }
     
 
+
 .main {
     flex: 1;
     padding: 1.875rem;
@@ -194,173 +195,35 @@ body::-ms-scrollbar-track {
 
 }
 
-
-.main__encabezado{
-  font-size: 1.5rem;
-    font-family: var(--font-family-secondary);
-    text-align: center;
-
-}
-.intro__texto{
-    font-size: 1.5rem;
-    font-family: var(--font-family-primary);
-    font-weight: 300;
-    line-height: 150%;
-    flex-wrap: wrap;
-    margin: 1.25rem;
-    text-align: justify;
-    text-justify: inter-word;
-    
-
-}
-.intro{
-    width: 100%;
-    min-width: 18.75rem;
-}
-
-.main__img-lateral{
-    width: 20%;
-    height: 20%;
-
-}
-
-.quienessomos__box{
+/* ESTILOS FOOTER  */
+.footer {
+    background-color: var(--color-background);
+    color: rgb(41, 36, 36);
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.main__quienessomos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-
-}
-.quienessomos__text{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    min-width: 18.75rem;
+    margin-right: 3.125rem;
+    min-width: 100%;
+    height: 3.125rem;
     
-}
+  }
 
-.quienessomos__p{ 
-    font-size: 1.25rem;
-    font-family: var(--font-family-primary);
-    text-align:center;
-    font-weight: 200;
-    line-height: 150%;
-    flex-wrap: wrap;
-    margin: 1.25rem 0 3.125rem 0;
-    max-width: 64.375rem;
-    text-align: justify;
+ .footer a {
+     color: var(--color-text);
+     text-decoration: none;
     
+     
+ }
 
+ /* ELEMENTOS REUTILIZADOS EN VARIOS HTML */
+
+ .icono_logo {
+    margin: 0 10px;
+    width: 15px;
 }
 
-/* ESTILOS NEWSLETTER */
-
-.newsletter {
-    padding: 1.25rem;
-    border-radius: 1.5625rem 0rem 1.5625rem 0rem;
-    text-align: center;
-    background-color: rgba(126, 212, 139, 0.5); 
-    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1); 
-    max-width: 21.875rem;
-    
-
-    
-    
-
-}
-.newsletter h2 {
-    margin-bottom: 1.25rem;
-    font-size: 1.5rem;
-    color: #333;
-    font-family: var(--font-family-secondary);
-}
-
-.newsletter p{
-    font-family: var(--font-family-primary);
-    font-size: 1rem;
-}
-.newsletter input[type="email"] {
-    width: calc(100% - 6.25rem);
-    padding: .625rem;
-    margin-bottom: 1.25rem;
-    border: .0625rem solid #ccc;
-    border-radius: 1.5625rem;
-    background-color: rgba(255, 253, 246);
-}
-.newsletter input[type="submit"] {
-    background-color: rgb(62, 62, 62); 
-    color: #fff;
-    border: none;
-    padding: .625rem 1.25rem;
-    border-radius: 1.5625rem;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: var(--font-family-secondary);
-}
-.newsletter input[type="submit"]:hover {
-    background-color: var(--color-primary);
-    box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
-}
-
-.newsletter__img{
-    max-width: 30%;
-    
-}
-
-.main__parteinferior{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    
-}
-
-.intro__ilustracion{
-    width: 100%;
-} 
-
-
-
-
- .proceso{
-    margin-top: 3.125rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-} 
-
-.proceso__item{
-    width: 18.75rem;
-    padding: 1.25rem;
-   
-}
-
-.button__form{
-    margin: 1.25rem;
-    background-color: rgb(41, 36, 36);
-    font-size: 1rem;
-    padding: .9375rem;
-    border-radius: 1.5625rem;
-    color: white;
-    text-decoration: none;
-    font-family: var(--font-family-secondary);
-    border: none;
-
-}
-
-.button__form:hover{
+ .button__form:hover{
     background-color: var(--color-primary);
     box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
 }
@@ -384,8 +247,9 @@ body::-ms-scrollbar-track {
 
 .button:hover{
     background-color: var(--color-primary);
-    box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
-}
+    box-shadow: 0 0 .4375rem .0625rem var(--color-primary);}
+
+/* Estilo cita reutilizada en index y slider del html quienessomos.html */
 
 .main__cita{
     display: flex;
@@ -416,25 +280,7 @@ body::-ms-scrollbar-track {
     font-style: italic;
 }
 
-.footer {
-    background-color: var(--color-background);
-    color: rgb(41, 36, 36);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 3.125rem;
-    min-width: 100%;
-    height: 3.125rem;
-    
-  }
 
- .footer a {
-     color: var(--color-text);
-     text-decoration: none;
-    
-     
- }
 
 /* ESTILOS SLIDER */
 
@@ -518,11 +364,7 @@ body::-ms-scrollbar-track {
     outline: none;
 }
 
-
-.icono_logo {
-    margin: 0 10px;
-    width: 15px;
-}
+/* ESTILO PESTAÑAS REUTILIZADAS EN INDEX, PLANES Y FAQ */
 
 .tabs {
     width: 670px;
@@ -572,45 +414,6 @@ body::-ms-scrollbar-track {
 
 
 
-.u-visible {
-    display:block;
-    font-family: var(--font-family-primary);
-    font-size: 1rem;
-    color: var(--color-text);
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-   
-    
-   
-
-}
-
-.button__precio{
-   
-    margin-bottom: 2rem;
-    background-color: rgb(41, 36, 36);
-    font-size: 1rem;
-    padding: .800rem;
-    border-radius: 1.5625rem;
-    color: white;
-    text-decoration: none;
-    font-family: var(--font-family-secondary);
-
-
-   
-    
-}
-
-.button__precio:hover{
-    background-color: var(--color-primary);
-    box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
-}
-
-
-
 .tabs-button {
     margin-bottom: 20px;
     display: flex;
@@ -636,132 +439,26 @@ color: var(--color-background); /* Color del texto del botón activo */
 }
 
 
-.precio{
-    font-family: var(--font-family-secondary);
-    color: var(--color-secondary);
-    font-size: 1.5rem;
-}
-.container__plans{
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: .625rem;
+
+
+.u-visible {
+    display:block;
     font-family: var(--font-family-primary);
-    
-  
-}
-
-.container__plans--h1{
-    font-family: 'Limelight', cursive;
-    color: #333;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-   
-}
-
-.acordeon__container{
-    width: 100%;
-
-}
-
-.acordeon__h2{
-    font-family: 'Limelight', cursive;
-    color: #333;
-    font-size: 1.5rem;
-    margin-top: .625rem;
-
-}
-
-.descripcion {
     font-size: 1rem;
-    line-height: 1.6;
     color: var(--color-text);
-    font-family: var(--font-family-primary);
-    text-align:justify;
-}
-
-.plan {
-    margin-bottom: 1.25rem;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.plan__h2 {
-    font-family: 'Limelight', cursive;
-    color: #333;
-    font-size: 1.5rem;
-    margin-top: 1.25rem;
-}
-
-.acordeon__item {
-  background-color: var(--color-background);
-   cursor: pointer;
-    padding: 1.125rem;
-    width: 100%;
-    text-align: left;
-    font-size: 1rem;
-    
-    font-family: var(--font-family-secondary);
-    flex-direction: column;
-    
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    margin: .625rem;
-   border: none;
-   border-bottom: .125rem solid #333;
-  
-}
-
-.acordeon__item:hover {
-   
-    border-bottom: .125rem solid var(--color-primary);
-    
-}
-
-.acordeon{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 1.25rem;
-
-}
-.acordeon{
-    width: 100%;
-    margin-bottom: 1.875rem;
     
+   
     
-    
-}
-.acordeon__info {
-    display: none;
-    padding:  .9375rem;
-    
-    overflow: hidden;
-    font-family: var(--font-family-primary);
-    font-size: 1rem;
-    border-radius: .625rem;
-    text-align: justify;
-    width: 100%;
-    
-}
-
-.acordeon__info p {
-    margin-top: 0;
-}
-
-.acordeon__info.active {
-    display: block;
+   
 
 }
 
-.faq-title{
-    font-family: var(--font-family-secondary);
-}
+
+/* ESTILO FORMULARIOS */
 
 .form__container {
     background-color: #fff;
@@ -1009,6 +706,338 @@ color: var(--color-background); /* Color del texto del botón activo */
     box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
 }
 
+/* ------------------------------------ */
+/*      ESTILOS INDEX.HTML */
+/* ------------------------------------ */
+
+.main__encabezado{
+  font-size: 1.5rem;
+    font-family: var(--font-family-secondary);
+    text-align: center;
+
+}
+.intro__texto{
+    font-size: 1.5rem;
+    font-family: var(--font-family-primary);
+    font-weight: 300;
+    line-height: 150%;
+    flex-wrap: wrap;
+    margin: 1.25rem;
+    text-align: justify;
+    text-justify: inter-word;
+    
+
+}
+
+
+.intro{
+    width: 100%;
+    min-width: 18.75rem;
+}
+
+/* ESTILOS NEWSLETTER */
+
+.newsletter {
+    padding: 1.25rem;
+    border-radius: 1.5625rem 0rem 1.5625rem 0rem;
+    text-align: center;
+    background-color: rgba(126, 212, 139, 0.5); 
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1); 
+    max-width: 21.875rem;
+
+}
+.newsletter h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+    color: #333;
+    font-family: var(--font-family-secondary);
+}
+
+.newsletter p{
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+}
+.newsletter input[type="email"] {
+    width: calc(100% - 6.25rem);
+    padding: .625rem;
+    margin-bottom: 1.25rem;
+    border: .0625rem solid #ccc;
+    border-radius: 1.5625rem;
+    background-color: rgba(255, 253, 246);
+}
+.newsletter input[type="submit"] {
+    background-color: rgb(62, 62, 62); 
+    color: #fff;
+    border: none;
+    padding: .625rem 1.25rem;
+    border-radius: 1.5625rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--font-family-secondary);
+}
+.newsletter input[type="submit"]:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
+}
+
+.newsletter__img{
+    max-width: 30%;
+    
+}
+
+.main__parteinferior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+.intro__ilustracion{
+    width: 100%;
+} 
+
+/* ESTILO ILUSTRACIONES PROCESO */
+.proceso{
+    margin-top: 3.125rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+} 
+
+.proceso__item{
+    width: 15rem;
+    padding: 1rem;
+   
+}
+
+/* ------------------------------------ */
+/*      ESTILOS QUIENESSOMOS.HTML */
+/* ------------------------------------ */
+
+.quienessomos__box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main__quienessomos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.main__img-lateral{
+    width: 20%;
+    height: 20%;
+
+}
+
+.quienessomos__text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    min-width: 18.75rem;
+    
+}
+
+.quienessomos__p{ 
+    font-size: 1.25rem;
+    font-family: var(--font-family-primary);
+    text-align:center;
+    font-weight: 200;
+    line-height: 150%;
+    flex-wrap: wrap;
+    margin: 1.25rem 0 3.125rem 0;
+    max-width: 64.375rem;
+    text-align: justify;
+    
+
+}
+
+
+
+
+.button__form{
+    margin: 1.25rem;
+    background-color: rgb(41, 36, 36);
+    font-size: 1rem;
+    padding: .9375rem;
+    border-radius: 1.5625rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family-secondary);
+    border: none;
+
+}
+
+/* ------------------------------------ */
+/*      ESTILOS PLANES.HTML */
+/* ------------------------------------ */
+
+
+/* ESTILOS ACORDEON */
+
+.button__precio{
+   
+    margin-bottom: 2rem;
+    background-color: rgb(41, 36, 36);
+    font-size: 1rem;
+    padding: .800rem;
+    border-radius: 1.5625rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family-secondary);
+
+
+   
+    
+}
+
+.button__precio:hover{
+    background-color: var(--color-primary);
+    box-shadow: 0 0 .4375rem .0625rem var(--color-primary);
+}
+
+
+.precio{
+    font-family: var(--font-family-secondary);
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+.container__plans{
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: .625rem;
+    font-family: var(--font-family-primary);
+    
+  
+}
+
+.container__plans--h1{
+    font-family: 'Limelight', cursive;
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+   
+}
+
+
+.acordeon__container{
+    width: 100%;
+
+}
+
+.acordeon__h2{
+    font-family: var(--font-family-secondary);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    margin-top: .625rem;
+
+}
+
+.descripcion {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    font-family: var(--font-family-primary);
+    text-align:justify;
+}
+
+.plan {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.plan__h2 {
+    font-family: 'Limelight', cursive;
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+}
+
+.acordeon__item {
+  background-color: var(--color-background);
+   cursor: pointer;
+    padding: 1.125rem;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    
+    font-family: var(--font-family-secondary);
+    flex-direction: column;
+    
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin: .625rem;
+   border: none;
+   border-bottom: .125rem solid #333;
+  
+}
+
+.acordeon__item:hover {
+   
+    border-bottom: .125rem solid var(--color-primary);
+    
+}
+
+.acordeon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.25rem;
+
+}
+.acordeon{
+    width: 100%;
+    margin-bottom: 1.875rem;
+    
+    
+    
+}
+.acordeon__info {
+    display: none;
+    padding:  .9375rem;
+    
+    overflow: hidden;
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    border-radius: .625rem;
+    text-align: justify;
+    width: 100%;
+    
+}
+
+.acordeon__info p {
+    margin-top: 0;
+}
+
+.acordeon__info.active {
+    display: block;
+
+}
+
+.faq-title{
+    font-family: var(--font-family-secondary);
+}
+
+
+
 @media screen and (max-width: 758px) {
     .header {
         flex-direction: row; /* Cambia a dirección vertical en pantallas más pequeñas */
@@ -1133,10 +1162,22 @@ color: var(--color-background); /* Color del texto del botón activo */
         min-width: 100%;}
 }
 
-@media screen and (max-width: 1024px) {
-    .slider__card {
-        flex: 0 0 50%; /* Dos tarjetas por fila en pantallas medianas */
-        max-width: 45rem; /* Ajusta el ancho máximo para pantallas medianas */
-        min-width: 25rem; /* Ajusta el ancho mínimo para pantallas medianas */
+@media screen and (min-width: 1024px) {
+    .nav__link {
+        color: rgb(62, 62, 62);
+        text-decoration: none;
+        font-size: 1rem;
+       
     }
+
+   
+    
+    .proceso__item{
+        width: 22rem;
+        padding: 1rem;
+       
+    }
+
+   
+    
 }
